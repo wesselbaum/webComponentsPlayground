@@ -1,12 +1,13 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component, HostBinding, ViewEncapsulation } from '@angular/core';
 
 
 
 @Component({
-  selector: 'app-scroll-headline',
+  selector: 'scroll-headline',
   imports: [],
   templateUrl: './scroll-headline.component.html',
-  styleUrl: './scroll-headline.component.css'
+  styleUrl: './scroll-headline.component.css',
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class ScrollHeadlineComponent {
   @HostBinding('@state')

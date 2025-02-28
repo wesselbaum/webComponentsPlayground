@@ -19,6 +19,7 @@
             "polyfills": [
               "zone.js"
             ],
+            "namedChunks": false,
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
