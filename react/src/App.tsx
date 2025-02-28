@@ -1,3 +1,4 @@
+
 import './App.css'
 import { ScrollHeadline } from './components/ScrollHeadline/ScrollHeadline'
 

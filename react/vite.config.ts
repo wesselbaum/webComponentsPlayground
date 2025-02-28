@@ -7,9 +7,12 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/main.tsx",
-      name: "subscription",
-      fileName: (format) => `subscription.${format}.js`,
+      name: "scrollHeadline",
+      fileName: (format) => `scrollHeadline.${format}.js`,
     },
     target: "esnext",
   },
+  define: {
+    'process.env': {}
+  }
 })
