@@ -6,11 +6,25 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface FinancingCalculator {
+        "durationMonths": number;
+        /**
+         * @deprecated use camelCase instead. Support for dash-casing will be removed in Stencil v5.
+         */
+        "duration-months"?: number;
+        "price": number;
+    }
     interface ScrollHeadline {
         "id": string;
     }
 }
 declare global {
+    interface HTMLFinancingCalculatorElement extends Components.FinancingCalculator, HTMLStencilElement {
+    }
+    var HTMLFinancingCalculatorElement: {
+        prototype: HTMLFinancingCalculatorElement;
+        new (): HTMLFinancingCalculatorElement;
+    };
     interface HTMLScrollHeadlineElement extends Components.ScrollHeadline, HTMLStencilElement {
     }
     var HTMLScrollHeadlineElement: {
@@ -18,14 +32,24 @@ declare global {
         new (): HTMLScrollHeadlineElement;
     };
     interface HTMLElementTagNameMap {
+        "financing-calculator": HTMLFinancingCalculatorElement;
         "scroll-headline": HTMLScrollHeadlineElement;
     }
 }
 declare namespace LocalJSX {
+    interface FinancingCalculator {
+        "durationMonths"?: number;
+        /**
+         * @deprecated use camelCase instead. Support for dash-casing will be removed in Stencil v5.
+         */
+        "duration-months"?: number;
+        "price"?: number;
+    }
     interface ScrollHeadline {
         "id"?: string;
     }
     interface IntrinsicElements {
+        "financing-calculator": FinancingCalculator;
         "scroll-headline": ScrollHeadline;
     }
 }
@@ -33,6 +57,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "financing-calculator": LocalJSX.FinancingCalculator & JSXBase.HTMLAttributes<HTMLFinancingCalculatorElement>;
             "scroll-headline": LocalJSX.ScrollHeadline & JSXBase.HTMLAttributes<HTMLScrollHeadlineElement>;
         }
     }
