@@ -1,4 +1,4 @@
-class ScrollHeadline extends HTMLElement {
+class FinancingCalculator extends HTMLElement {
 
     constructor() {
         super();
@@ -53,4 +53,4 @@ class ScrollHeadline extends HTMLElement {
     }
 }
 
-customElements.define('financing-calculator', ScrollHeadline);
+customElements.define('financing-calculator', FinancingCalculator);
