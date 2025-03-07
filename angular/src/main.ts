@@ -7,6 +7,7 @@
 import { createCustomElement } from '@angular/elements';
 import { createApplication } from '@angular/platform-browser';
 import { ScrollHeadlineComponent } from './app/scroll-headline/scroll-headline.component';
+import {FinancingCalculatorComponent} from './app/financing-calculator/financing-calculator.component';
 
 (async () => {
 
@@ -19,7 +20,11 @@ import { ScrollHeadlineComponent } from './app/scroll-headline/scroll-headline.c
   const scrollHeadlineComponent = createCustomElement(ScrollHeadlineComponent, {
     injector: app.injector,
   });
+  const financingCalculatorComponent = createCustomElement(FinancingCalculatorComponent, {
+    injector: app.injector,
+  });
 
   customElements.define('scroll-headline', scrollHeadlineComponent);
+  customElements.define('financing-calculator', financingCalculatorComponent);
 
 })();

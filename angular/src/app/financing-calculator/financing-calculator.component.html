@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <p>In {{this.durationMonths()}} Monaten bei einer monatlicher Rate von {{(this.price() / this.durationMonths()).toFixed(2)}} EUR
+    finanzieren.
+    <button (click)="decreaseDuration()">kürzer</button>
+    <button (click)="increaseDuration()">länger</button></p>
+</div>
