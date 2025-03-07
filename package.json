@@ -12,7 +12,8 @@
     "getReactSize": "echo 'React:' && gzip-size react/dist/webComponents.es.js --include-original && echo '+' && gzip-size react/dist/webComponents.umd.js --include-original",
     "getStencilSize": "echo 'Stencil:' && echo 'index' && gzip-size stencil/dist/components/index.d.ts --include-original && echo '+ financing-calculator' && gzip-size stencil/dist/components/financing-calculator.d.ts --include-original && echo '+ scroll-headline' && gzip-size stencil/dist/components/scroll-headline.d.ts --include-original",
     "getSvelteSize": "echo 'Svelte:' && gzip-size svelte/public/build/bundle.js --include-original",
-    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getStencilSize && npm run getSvelteSize"
+    "getVueSize": "echo 'Vue:' && echo ''app.js && gzip-size vue/dist/js/app.js --include-original && echo ''+ chunk-vendors.js && gzip-size vue/dist/js/chunk-vendors.js --include-original",
+    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getStencilSize && npm run getSvelteSize && npm run getVueSize"
   },
   "author": "wesselbaum",
   "license": "ISC",
