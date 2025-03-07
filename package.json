@@ -1,0 +1,22 @@
+{
+  "name": "webcomponentsplayground",
+  "version": "1.0.0",
+  "description": "Testing out web component build tools and frameworks",
+  "main": "index.js",
+  "scripts": {
+    "getAngularSize": "echo 'Angular:' && gzip-size angular/dist/angular/browser/main.js --include-original",
+    "getAtomicoSize": "echo 'Atomico:' && gzip-size atomico/dist/assets/*.js --include-original",
+    "getLitSize": "echo 'Lit:' && gzip-size lit/dist/assets/*.js --include-original",
+    "getPlainSize": "echo 'Plain:' && gzip-size plain/financingCalculator.js --include-original && echo '+' && gzip-size plain/scrollHeadline.js --include-original",
+    "getPreactSize": "echo 'Preact:' && gzip-size preact/dist/assets/index.js --include-original",
+    "getReactSize": "echo 'React:' && gzip-size react/dist/webComponents.es.js --include-original && echo '+' && gzip-size react/dist/webComponents.umd.js --include-original",
+    "getStencilSize": "echo 'Stencil:' && echo 'index' && gzip-size stencil/dist/components/index.d.ts --include-original && echo '+ financing-calculator' && gzip-size stencil/dist/components/financing-calculator.d.ts --include-original && echo '+ scroll-headline' && gzip-size stencil/dist/components/scroll-headline.d.ts --include-original",
+    "getSvelteSize": "echo 'Svelte:' && gzip-size svelte/public/build/bundle.js --include-original",
+    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getStencilSize && npm run getSvelteSize"
+  },
+  "author": "wesselbaum",
+  "license": "ISC",
+  "dependencies": {
+    "gzip-size-cli": "^5.1.0"
+  }
+}
