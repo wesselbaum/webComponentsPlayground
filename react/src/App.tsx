@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <ScrollHeadline/>
+      <ScrollHeadline id={"asdf"}/>
     </>
   )
 }

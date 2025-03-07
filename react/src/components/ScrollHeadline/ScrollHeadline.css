@@ -1,0 +1,5 @@
+.link { opacity: 0; display: inline }
+
+.headline:hover .link {opacity: 1}
+
+.headline  {text-decoration: underline red}

@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/main.tsx",
-      name: "scrollHeadline",
-      fileName: (format) => `scrollHeadline.${format}.js`,
+      name: "webComponents",
+      fileName: (format) => `webComponents.${format}.js`,
     },
     target: "esnext",
   },
