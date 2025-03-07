@@ -19,6 +19,11 @@ export class FinancingCalculatorComponent {
 
   render() {
     return <div class="wrapper">
-      <p>In {this.durationMonths} Monaten bei einer monatlicher Rate von {(this.price / this.durationMonths).toFixed(2)} EUR finanzieren. <button onClick={() => this.decreaseDuration()}>kürzer</button><button onClick={() => this.increaseDuration()}>länger</button></p></div>;
+      <p>In {this.durationMonths} Monaten bei einer monatlicher Rate
+        von {(this.price / this.durationMonths).toFixed(2)} EUR finanzieren. <button
+          onClick={() => this.decreaseDuration()}>kürzer</button>
+        <button onClick={() => this.increaseDuration()}>länger</button>
+      </p>
+    </div>;
   }
 }

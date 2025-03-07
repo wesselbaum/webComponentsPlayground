@@ -1,13 +1,13 @@
 import css from './ScrollHeadline.css?inline';
 
-export const ScrollHeadline = ({heading}) => {
+export const ScrollHeadline = ({id}) => {
     return (
         <>
             <style>
                 {css}
             </style>
             <div>
-                <h1 id="${this.id}" className="headline"><a className="link" href="#${this.id}">
+                <h1 id={id} className="headline"><a className="link" href={'#'+ id}>
                     <svg width="30" height="30" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                         <g data-name="1" id="_1">
                             <path
@@ -16,7 +16,7 @@ export const ScrollHeadline = ({heading}) => {
                                 d="M295.9,360.71a95,95,0,0,1-24.13-3.1,15,15,0,0,1,7.6-29,65.52,65.52,0,0,0,62.87-17.08l64.7-64.69a65.53,65.53,0,0,0-92.68-92.68l-64.69,64.7a65.84,65.84,0,0,0-17.08,62.89,15,15,0,0,1-29,7.55,95.92,95.92,0,0,1,24.9-91.65l64.69-64.7A95.53,95.53,0,1,1,428.15,268l-64.69,64.69A94.92,94.92,0,0,1,295.9,360.71Z"/>
                         </g>
                     </svg>
-                </a>{heading}</h1>
+                </a><slot /></h1>
 
             </div>
         </>
