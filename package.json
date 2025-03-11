@@ -13,11 +13,14 @@
     "getStencilSize": "echo 'Stencil:' && echo 'index' && gzip-size stencil/dist/components/index.d.ts --include-original && echo '+ financing-calculator' && gzip-size stencil/dist/components/financing-calculator.d.ts --include-original && echo '+ scroll-headline' && gzip-size stencil/dist/components/scroll-headline.d.ts --include-original",
     "getSvelteSize": "echo 'Svelte:' && gzip-size svelte/public/build/bundle.js --include-original",
     "getVueSize": "echo 'Vue:' && echo ''app.js && gzip-size vue/dist/js/app.js --include-original && echo ''+ chunk-vendors.js && gzip-size vue/dist/js/chunk-vendors.js --include-original",
-    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getStencilSize && npm run getSvelteSize && npm run getVueSize"
+    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getStencilSize && npm run getSvelteSize && npm run getVueSize",
+    "serveSvelte": "npm run start --prefix svelte",
+    "servePlain": "serve ./plain -l 3000"
   },
   "author": "wesselbaum",
   "license": "ISC",
   "dependencies": {
-    "gzip-size-cli": "^5.1.0"
+    "gzip-size-cli": "^5.1.0",
+    "serve": "^14.2.4"
   }
 }
