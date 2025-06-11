@@ -18,9 +18,3 @@ if (!customElements.get("scroll-headline")) {
 if (!customElements.get("financing-calculator")) {
   customElements.define("financing-calculator", FinancingCalculatorApp);
 }
-
-// createRoot(document.getElementById('root')!).render(
-//   <StrictMode>
-//     <App />
-//   </StrictMode>,
-// )
