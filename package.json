@@ -10,10 +10,11 @@
     "getPlainSize": "echo 'Plain:' && gzip-size plain/financingCalculator.js --include-original && echo '+' && gzip-size plain/scrollHeadline.js --include-original",
     "getPreactSize": "echo 'Preact:' && gzip-size preact/dist/assets/index.js --include-original",
     "getReactSize": "echo 'React:' && gzip-size react/dist/webComponents.umd.js --include-original",
+    "getReactWithWrapperSize": "echo 'React with r2wc:' && gzip-size reactWithWrapper/dist/webComponents.umd.js --include-original",
     "getStencilSize": "echo 'Stencil:' && echo 'index' && gzip-size stencil/dist/stencil/index-16ae0836.js --include-original && echo '+ financing-calculator' && gzip-size stencil/dist/stencil/financing-calculator.entry.js --include-original && echo '+ scroll-headline' && gzip-size stencil/dist/stencil/scroll-headline.entry.js --include-original",
     "getSvelteSize": "echo 'Svelte:' && gzip-size svelte/public/build/bundle.js --include-original",
     "getVueSize": "echo 'Vue:' && echo ''app.js && gzip-size vue/dist/js/app.js --include-original && echo ''+ chunk-vendors.js && gzip-size vue/dist/js/chunk-vendors.js --include-original",
-    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getStencilSize && npm run getSvelteSize && npm run getVueSize",
+    "getAllSizes": "npm run getAngularSize && npm run getAtomicoSize && npm run getLitSize && npm run getPlainSize && npm run getPreactSize && npm run getReactSize && npm run getReactWithWrapperSize && npm run getStencilSize && npm run getSvelteSize && npm run getVueSize",
     "serveSvelte": "npm run start --prefix svelte",
     "servePlain": "serve ./plain -l 3000"
   },
